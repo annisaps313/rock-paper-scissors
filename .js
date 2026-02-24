@@ -36,3 +36,13 @@ function playRound(humanChoice, computerChoice){
 
     console.log(`Bot: ${computerScore} | You: ${humanScore}`)
 }
+
+function playGame(){
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+}
+
+playGame()
