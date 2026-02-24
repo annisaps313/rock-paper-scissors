@@ -12,8 +12,8 @@ let getHumanChoices = ()=> {
     return humanChoice;
 };
 
-// let humanScore = 0;
-// let computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 // function playRound(humanChoice, computerChoice){
 //     if (computerChoice === 0 && humanChoice === 1){
