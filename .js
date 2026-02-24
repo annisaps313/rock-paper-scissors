@@ -1,22 +1,22 @@
 console.log("Welcome to the game!");
 
 let getComputerChoice = () => Math.floor(Math.random() * 3);
-console.log("Computer: "+showComputerChoices(getComputerChoice()));
+// console.log("Computer: "+showComputerChoices(getComputerChoice()));
 
-function showComputerChoices(num){
-    let computer;
-    switch (num){
-        case 0:
-            computer = "Rock";
-            break;
-        case 1:
-            computer = "Paper";
-            break;
-        case 2:
-            computer = "Scissors";
-    }
-    return computer;
-}
+// function showComputerChoices(num){
+//     let computer;
+//     switch (num){
+//         case 0:
+//             computer = "Rock";
+//             break;
+//         case 1:
+//             computer = "Paper";
+//             break;
+//         case 2:
+//             computer = "Scissors";
+//     }
+//     return computer;
+// }
 
 function getHumanChoices(){
     let human = prompt("Please input your choice");
