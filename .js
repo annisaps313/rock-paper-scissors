@@ -59,7 +59,7 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-const humanSelection = getHumanChoices();
+const humanSelection = getHumanChoices;
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
