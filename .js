@@ -1,6 +1,10 @@
 console.log("Welcome to the game!");
 
-let getComputerChoice = () => Math.floor(Math.random() * 3);
+let computerChoice;
+let getComputerChoices = () => {
+    computerChoice = Math.floor(Math.random() * 3);
+    return computerChoice;
+};
 
 let humanChoice;
 let getHumanChoices = ()=> {
