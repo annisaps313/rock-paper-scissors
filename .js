@@ -26,6 +26,8 @@ function playRound(humanChoice, computerChoice){
     } else if (humanChoice === "scissors" && computerChoice === "rock"){
         console.log("You lose! Rock beats scissors");
         computerScore +=1;
+    } else if (humanChoice === computerChoice){
+        console.log("it's draw:)")
     } else {
         console.log("You win!");
         humanScore +=1;
