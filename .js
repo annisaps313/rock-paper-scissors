@@ -20,18 +20,17 @@ function playRound(humanChoice, computerChoice){
 
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
-        console.log("You lose! Paper beats rock");
+        console.log("Paper beats rock");
         computerScore +=1;
     } else if (humanChoice === "paper" && computerChoice === "scissors"){
-        console.log("You lose! Scissors beats paper");
+        console.log("Scissors beats paper");
         computerScore +=1;
     } else if (humanChoice === "scissors" && computerChoice === "rock"){
-        console.log("You lose! Rock beats scissors");
+        console.log("Rock beats scissors");
         computerScore +=1;
     } else if (humanChoice === computerChoice){
         console.log("it's draw:)")
     } else {
-        console.log("You win!");
         humanScore +=1;
     }
 
