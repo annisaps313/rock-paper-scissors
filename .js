@@ -3,8 +3,6 @@ console.log("Welcome to the game!");
 let getComputerChoice = () => Math.floor(Math.random() * 3);
 let getHumanChoices = prompt("Please input your choice");
 
-let humanChoice;
-
 let humanScore = 0;
 let computerScore = 0;
 
