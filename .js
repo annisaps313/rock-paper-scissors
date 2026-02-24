@@ -57,7 +57,7 @@ function playRound(humanChoice, computerChoice){
     } else if (computerChoice === 2 && humanChoice === 1){
         console.log("lose");
         computerChoice++;
-    } else (computerChoice === humanChoice){;
-        console.log("We are tie")
-    };
+    } else{
+        console.log("We are tied")
+    }
 }
