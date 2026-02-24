@@ -1,4 +1,4 @@
-console.log("Welcome to the game! \nPlease choose: \n(0)Rock; (1)Paper; (2)Scissors");
+console.log("Welcome to the game!");
 
 let getComputerChoice = n => Math.floor(Math.random() * n);
 console.log("Computer: "+showComputerChoices(getComputerChoice(3)));
