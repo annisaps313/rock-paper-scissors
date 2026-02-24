@@ -16,7 +16,7 @@ function playRound(humanChoice, computerChoice){
         computerChoice = "scissors";
     }
 
-    console.log(`Bot using ${computerChoice} vs You who choose ${humanChoice}`);
+    console.log(`Bot(${computerChoice}) Vs You(${humanChoice})`);
 
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
