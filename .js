@@ -9,11 +9,11 @@ function playRound(humanChoice, computerChoice){
 
     // convert random number to string
     if (computerChoice == 0){
-        return "rock";
+        computerChoice = "rock";
     } else if (computerChoice == 1){
-        return "paper";
+        computerChoice = "paper";
     } else if (computerChoice == 2){
-        return "scissors";
+        computerChoice = "scissors";
     }
 
     // logic beating game
