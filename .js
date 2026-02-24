@@ -40,23 +40,23 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
     if (computerChoice === 0 && humanChoice === 1){
+        humanChoice++;
         console.log("You win! Paper beats Rock");
-        humanChoice++;
     } else if (computerChoice === 0 && humanChoice === 2){
+        computerChoice++;
         console.log("You Lose");
-        computerChoice++;
     } else if (computerChoice === 1 && humanChoice === 0){
+        computerChoice++;
         console.log("You lose");
-        computerChoice++;
     } else if (computerChoice === 1 && humanChoice === 2){
+        humanChoice++;
         console.log("You win");
-        humanChoice++;
     } else if (computerChoice === 2 && humanChoice === 0){
-        console.log("win");
         humanChoice++;
+        console.log("win");
     } else if (computerChoice === 2 && humanChoice === 1){
-        console.log("lose");
         computerChoice++;
+        console.log("lose");
     } else{
         console.log("We are tied")
     }
