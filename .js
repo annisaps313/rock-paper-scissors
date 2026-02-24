@@ -29,7 +29,7 @@ function playRound(humanChoice, computerChoice){
         console.log("Rock beats scissors");
         computerScore +=1;
     } else if (humanChoice === computerChoice){
-        console.log("it's draw:)")
+        console.log("It's draw:)")
     } else {
         humanScore +=1;
     }
