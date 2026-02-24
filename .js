@@ -7,7 +7,7 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
 
-    // convert random number computer choice
+    // convert random number to string
     if (computerChoice == 0){
         return "rock";
     } else if (computerChoice == 1){
@@ -15,4 +15,5 @@ function playRound(humanChoice, computerChoice){
     } else if (computerChoice == 2){
         return "scissors";
     }
+
 }
