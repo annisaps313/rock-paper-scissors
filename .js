@@ -1,20 +1,9 @@
 console.log("Welcome to the game!");
 
 let getComputerChoice = () => Math.floor(Math.random() * 3);
-
 let getHumanChoices = prompt("Please input your choice");
+
 let humanChoice;
-switch (getHumanChoices.toLowerCase()){
-    case "rock":
-        humanChoice = 0;
-        break;
-    case "paper":
-        humanChoice = 1;
-        break;
-    case "scissors":
-        humanChoice = 2;
-        break;
-}
 
 let humanScore = 0;
 let computerScore = 0;
