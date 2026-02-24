@@ -61,3 +61,8 @@ function playRound(humanChoice, computerChoice){
         console.log("We are tied")
     }
 }
+
+const humanSelection = getHumanChoices();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection)
