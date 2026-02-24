@@ -47,7 +47,7 @@ function playGame(){
     if (humanScore > computerScore){
         console.log("Congratulations! You are the winner")
     } else if (humanScore === computerScore){
-        console.log("Both are tied!")
+        console.log("We are tied!")
     } else{
         console.log("Sorry, you lose the game:(")
     }
