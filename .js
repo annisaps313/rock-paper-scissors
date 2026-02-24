@@ -34,7 +34,8 @@ function playRound(humanChoice, computerChoice){
         humanScore +=1;
     }
 
-    console.log(`Bot: ${computerScore} | You: ${humanScore}`)
+    console.log(`Bot: ${computerScore} | You: ${humanScore} \n
+        ======================================================`)
 }
 
 function playGame(){
