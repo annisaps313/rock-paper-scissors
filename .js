@@ -1,7 +1,7 @@
 console.log("Welcome to the game!");
 
-let getComputerChoice = n => Math.floor(Math.random() * n);
-console.log("Computer: "+showComputerChoices(getComputerChoice(3)));
+let getComputerChoice = () => Math.floor(Math.random() * 3);
+console.log("Computer: "+showComputerChoices(getComputerChoice()));
 
 function showComputerChoices(num){
     let computer;
