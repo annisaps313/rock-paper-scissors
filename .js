@@ -18,4 +18,20 @@ function showComputerChoices(num){
     return computer;
 }
 
+function getHumanChoices(){
+    let human = prompt("Please input your choice");
+    let humanChoice;
+    switch (human.toLowerCase()){
+        case "rock":
+            humanChoice = 0;
+            break;
+        case "paper":
+            humanChoice = 1;
+            break;
+        case "scissors":
+            humanChoice = 2;
+            break;
+    }
+    return humanChoice;
+}
 
