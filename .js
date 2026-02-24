@@ -34,4 +34,6 @@ function playRound(humanChoice, computerChoice){
         console.log("You win!");
         humanScore +=1;
     }
+
+    console.log(`Bot: ${computerScore} | You: ${humanScore}`)
 }
