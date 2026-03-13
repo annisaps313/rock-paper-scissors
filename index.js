@@ -44,12 +44,15 @@ function playGame(){
             playRound(button.value);
         })
     });
+
+    let result = document.querySelector(".result");
+    
     if (humanScore > computerScore){
-        console.log("Congratulations! You are the winner")
+        result.textContent = "Congratulations! You are the winner";
     } else if (humanScore === computerScore){
-        console.log("We are tied!")
+        result.textContent = "We are tied!";
     } else{
-        console.log("Sorry, you lose the game:(")
+        result.textContent = "Sorry, you lose the game:(";
     }
 }
 
