@@ -55,12 +55,18 @@ function playGame(){
                 if (humanScore > computerScore){
                     showScore.textContent = "Congratulations! You are the winner";
                     round = 0;
+                    humanScore = 0;
+                    computerScore = 0;
                 } else if (humanScore === computerScore){
                     showScore.textContent = "We are tied!";
                     round = 0;
+                    humanScore = 0;
+                    computerScore = 0;
                 } else{
                     showScore.textContent = "Sorry, you lose the game:(";
                     round = 0;
+                    humanScore = 0;
+                    computerScore = 0;
                 }
             }
         })
