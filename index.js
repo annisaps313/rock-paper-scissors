@@ -39,7 +39,7 @@ function playRound(humanChoice, computerChoice){
         humanScore++;
     }
 
-    showScore.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
+    result.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
     round++;
 }
 
@@ -50,17 +50,17 @@ function playGame(){
             playRound(button.value, getComputerChoice());
             if (round === 5){
                 if (humanScore > computerScore){
-                    showScore.textContent = "Congratulations! You are the winner";
+                    result.textContent = "Congratulations! You are the winner";
                     round = 0;
                     humanScore = 0;
                     computerScore = 0;
                 } else if (humanScore === computerScore){
-                    showScore.textContent = "We are tied!";
+                    result.textContent = "We are tied!";
                     round = 0;
                     humanScore = 0;
                     computerScore = 0;
                 } else{
-                    showScore.textContent = "Sorry, you lose the game:(";
+                    result.textContent = "Sorry, you lose the game:(";
                     round = 0;
                     humanScore = 0;
                     computerScore = 0;
