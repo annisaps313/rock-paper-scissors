@@ -7,7 +7,7 @@ let computerScore = 0;
 let showChoice = document.querySelector(".choice");
 showChoice.textContent = "Start Game!";
 
-let showScore = document.querySelector("h2");
+let showScore = document.querySelector(".score");
 showScore.textContent = "";
 
 function playRound(humanChoice, computerChoice){
