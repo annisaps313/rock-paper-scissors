@@ -4,7 +4,7 @@ const getHumanChoice = ()=> prompt("Please input your choice");
 let humanScore = 0;
 let computerScore = 0;
 
-let showChoice = document.querySelector("h1");
+let showChoice = document.querySelector(".choice");
 showChoice.textContent = "Start Game!";
 
 let showScore = document.querySelector("h2");
