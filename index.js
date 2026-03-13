@@ -29,16 +29,18 @@ function playRound(humanChoice, computerChoice){
 
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
-        showScore.textContent = `You: ${humanScore} | Bot: ${computerScore+=1}`;
+        computerScore++;
     } else if (humanChoice === "paper" && computerChoice === "scissors"){
-        showScore.textContent = `You: ${humanScore} | Bot: ${computerScore+=1}`;
+        computerScore++;
     } else if (humanChoice === "scissors" && computerChoice === "rock"){
-        showScore.textContent = `You: ${humanScore} | Bot: ${computerScore+=1}`;
+        computerScore++;
     } else if (humanChoice === computerChoice){
-        showScore.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
+        computerScore;
     } else {
-        showScore.textContent = `You: ${humanScore+=1} | Bot: ${computerScore}`;
+        humanScore++;
     }
+
+    showScore.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
 }
 
 function playGame(){
@@ -50,11 +52,11 @@ function playGame(){
     });
 
     if (humanScore > computerScore){
-        showScore.textContent = "Congratulations! You are the winner";
+        result.textContent = "Congratulations! You are the winner";
     } else if (humanScore === computerScore){
-        showScore.textContent = "We are tied!";
+        result.textContent = "We are tied!";
     } else{
-        showScore.textContent = "Sorry, you lose the game:(";
+        result.textContent = "Sorry, you lose the game:(";
     }
 }
 
