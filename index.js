@@ -10,6 +10,8 @@ showChoice.textContent = "Start Game!";
 let showScore = document.querySelector(".score");
 showScore.textContent = "";
 
+let result = document.querySelector(".result");
+
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
 
@@ -49,8 +51,6 @@ function playGame(){
             playRound(button.value, getComputerChoice());
         })
     });
-
-    let result = document.querySelector(".result");
 
     if (humanScore > computerScore){
         result.textContent = "Congratulations! You are the winner";
