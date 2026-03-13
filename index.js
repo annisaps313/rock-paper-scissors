@@ -22,25 +22,25 @@ function playRound(humanChoice, computerChoice){
         computerChoice = "scissors";
     }
 
-    showChoice.textContent = `Bot: ${computerChoice} vs You: ${humanChoice}`;
+    showChoice.textContent = `You: ${humanChoice} vs Bot: ${computerChoice}`;
 
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
         console.log("Paper beats rock");
-        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
+        showScore.textContent = `You: ${humanChoice} vs Bot: ${computerChoice +=1}`;
     } else if (humanChoice === "paper" && computerChoice === "scissors"){
         console.log("Scissors beats paper");
         computerScore +=1;
-        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
+        showScore.textContent = `You: ${humanChoice} vs Bot: ${computerChoice +=1}`;
     } else if (humanChoice === "scissors" && computerChoice === "rock"){
         console.log("Rock beats scissors");
         computerScore +=1;
-        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
+        showScore.textContent = `You: ${humanChoice} vs Bot: ${computerChoice +=1}`;
     } else if (humanChoice === computerChoice){
         console.log("It's draw:)")
-        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
+        showScore.textContent = `You: ${humanChoice} vs Bot: ${computerChoice +=1}`;
     } else {
-        showScore.textContent = `Bot: ${humanScore +=1} | You: ${humanScore}`;
+        showScore.textContent = `You: ${humanChoice +=1} vs Bot: ${computerChoice}`;
     }
 }
 
