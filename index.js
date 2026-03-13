@@ -13,6 +13,8 @@ showScore.textContent = "";
 let result = document.querySelector(".result");
 result.textContent = "";
 
+let round = 0;
+
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
 
@@ -41,6 +43,7 @@ function playRound(humanChoice, computerChoice){
     }
 
     showScore.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
+    round++;
 }
 
 function playGame(){
@@ -48,16 +51,20 @@ function playGame(){
     btn.forEach(button =>{
         button.addEventListener("click", ()=>{
             playRound(button.value, getComputerChoice());
+            if (round === 5){
+                if (humanScore > computerScore){
+                    showScore.textContent = "Congratulations! You are the winner";
+                    round = 0;
+                } else if (humanScore === computerScore){
+                    showScore.textContent = "We are tied!";
+                    round = 0;
+                } else{
+                    showScore.textContent = "Sorry, you lose the game:(";
+                    round = 0;
+                }
+            }
         })
     });
-
-    if (humanScore > computerScore){
-        result.textContent = "Congratulations! You are the winner";
-    } else if (humanScore === computerScore){
-        result.textContent = "We are tied!";
-    } else{
-        result.textContent = "Sorry, you lose the game:(";
-    }
 }
 
 playGame()
