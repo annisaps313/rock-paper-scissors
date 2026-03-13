@@ -4,6 +4,9 @@ const getHumanChoice = ()=> prompt("Please input your choice");
 let humanScore = 0;
 let computerScore = 0;
 
+let showChoice = document.querySelector("h1");
+showChoice.textContent = "Start Game!";
+
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
 
@@ -16,7 +19,7 @@ function playRound(humanChoice, computerChoice){
         computerChoice = "scissors";
     }
 
-    console.log(`Bot(${computerChoice}) Vs You(${humanChoice})`);
+    showChoice.textContent = `Bot(${computerChoice}) Vs You(${humanChoice})`;
 
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
@@ -46,7 +49,7 @@ function playGame(){
     });
 
     let result = document.querySelector(".result");
-    
+
     if (humanScore > computerScore){
         result.textContent = "Congratulations! You are the winner";
     } else if (humanScore === computerScore){
