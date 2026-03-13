@@ -44,7 +44,7 @@ function playGame(){
     let btn = document.querySelectorAll("input");
     btn.forEach(button =>{
         button.addEventListener("click", ()=>{
-            playRound(button.value);
+            playRound(button.value, getComputerChoice());
         })
     });
 
