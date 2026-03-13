@@ -7,9 +7,6 @@ let computerScore = 0;
 let showChoice = document.querySelector(".choice");
 showChoice.textContent = "Start Game!";
 
-let showScore = document.querySelector(".score");
-showScore.textContent = "";
-
 let result = document.querySelector(".result");
 result.textContent = "";
 
