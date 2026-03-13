@@ -38,7 +38,12 @@ function playRound(humanChoice, computerChoice){
 }
 
 function playGame(){
-
+    let btn = document.querySelectorAll("input");
+    btn.forEach(button =>{
+        button.addEventListener("click", ()=>{
+            playRound(button.value);
+        })
+    });
     if (humanScore > computerScore){
         console.log("Congratulations! You are the winner")
     } else if (humanScore === computerScore){
