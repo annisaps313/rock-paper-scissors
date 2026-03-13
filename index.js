@@ -22,7 +22,7 @@ function playRound(humanChoice, computerChoice){
         computerChoice = "scissors";
     }
 
-    showChoice.textContent = `Bot(${computerChoice}) Vs You(${humanChoice})`;
+    showChoice.textContent = `Bot: ${computerChoice} vs You: ${humanChoice}`;
 
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
