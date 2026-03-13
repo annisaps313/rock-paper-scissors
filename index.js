@@ -27,18 +27,18 @@ function playRound(humanChoice, computerChoice){
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
         console.log("Paper beats rock");
-        showScore.textContent = `Bot: ${computerScore +=1;} | You: ${humanScore}`;
+        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
     } else if (humanChoice === "paper" && computerChoice === "scissors"){
         console.log("Scissors beats paper");
         computerScore +=1;
-        showScore.textContent = `Bot: ${computerScore +=1;} | You: ${humanScore}`;
+        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
     } else if (humanChoice === "scissors" && computerChoice === "rock"){
         console.log("Rock beats scissors");
         computerScore +=1;
-        showScore.textContent = `Bot: ${computerScore +=1;} | You: ${humanScore}`;
+        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
     } else if (humanChoice === computerChoice){
         console.log("It's draw:)")
-        showScore.textContent = `Bot: ${computerScore +=1;} | You: ${humanScore}`;
+        showScore.textContent = `Bot: ${computerScore +=1} | You: ${humanScore}`;
     } else {
         showScore.textContent = `Bot: ${humanScore +=1} | You: ${humanScore}`;
     }
