@@ -12,6 +12,10 @@ result.textContent = "";
 
 let round = 0;
 
+let heart = 5;
+let showHeart = document.querySelector(".heart");
+showHeart.textContent = "5/5"
+
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
 
@@ -41,6 +45,7 @@ function playRound(humanChoice, computerChoice){
 
     result.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
     round++;
+    heart--;
 }
 
 function playGame(){
@@ -48,6 +53,11 @@ function playGame(){
     btn.forEach(button =>{
         button.addEventListener("click", ()=>{
             playRound(button.value, getComputerChoice());
+            if (heart === 0){
+                heart = 5;
+            }
+            showHeart.textContent = `${heart}/5`;
+
             if (round === 5){
                 if (humanScore > computerScore){
                     result.textContent = "Congratulations! You are the winner";
