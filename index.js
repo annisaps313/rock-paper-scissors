@@ -7,6 +7,9 @@ let computerScore = 0;
 let showChoice = document.querySelector("h1");
 showChoice.textContent = "Start Game!";
 
+let showScore = document.querySelector("h2");
+showScore.textContent = "";
+
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
 
@@ -37,7 +40,7 @@ function playRound(humanChoice, computerChoice){
         humanScore +=1;
     }
 
-    console.log(`Bot: ${computerScore} | You: ${humanScore}`)
+    showScore.textContent = `Bot: ${computerScore} | You: ${humanScore}`;
 }
 
 function playGame(){
