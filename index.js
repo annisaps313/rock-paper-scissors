@@ -11,6 +11,7 @@ let showScore = document.querySelector(".score");
 showScore.textContent = "";
 
 let result = document.querySelector(".result");
+result.textContent = "";
 
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
@@ -28,16 +29,16 @@ function playRound(humanChoice, computerChoice){
 
     // logic beating game
     if (humanChoice === "rock" && computerChoice === "paper"){
-        console.log("Paper beats rock");
+        result.textContent = "Paper beats rock";
         showScore.textContent = `You: ${humanScore} | Bot: ${computerScore+=1}`;
     } else if (humanChoice === "paper" && computerChoice === "scissors"){
-        console.log("Scissors beats paper");
+        result.textContent = "Scissors beats paper";
         showScore.textContent = `You: ${humanScore} | Bot: ${computerScore+=1}`;
     } else if (humanChoice === "scissors" && computerChoice === "rock"){
-        console.log("Rock beats scissors");
+        result.textContent = "Rock beats scissors";
         showScore.textContent = `You: ${humanScore} | Bot: ${computerScore+=1}`;
     } else if (humanChoice === computerChoice){
-        console.log("It's draw:)")
+        result.textContent = "It's draw:)";
         showScore.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
     } else {
         showScore.textContent = `You: ${humanScore+=1} | Bot: ${computerScore}`;
