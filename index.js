@@ -66,7 +66,9 @@ function playGame(){
                 } else{
                     result.textContent = "Sorry, you lose the game:(";
                 }
-
+                round = 0;
+                humanScore = 0;
+                computerScore = 0;
             }
         })
     });
