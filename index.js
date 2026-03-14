@@ -1,5 +1,5 @@
-const getComputerChoice = ()=> Math.floor(Math.random() * 3);
-const getHumanChoice = ()=> prompt("Please input your choice");
+const getComputerChoice = () => Math.floor(Math.random() * 3);
+const getHumanChoice = () => prompt("Please input your choice");
 
 let humanScore = 0;
 let computerScore = 0;
@@ -14,64 +14,65 @@ let round = 0;
 
 let heart = 5;
 let showHeart = document.querySelector(".heart");
-showHeart.textContent = "5/5"
+showHeart.textContent = "5/5";
 
-function playRound(humanChoice, computerChoice){
-    humanChoice = humanChoice.toLowerCase();
+function playRound(humanChoice, computerChoice) {
+  humanChoice = humanChoice.toLowerCase();
 
-    // convert random number to string
-    if (computerChoice == 0){
-        computerChoice = "rock";
-    } else if (computerChoice == 1){
-        computerChoice = "paper";
-    } else if (computerChoice == 2){
-        computerChoice = "scissors";
-    }
+  // convert random number to string
+  if (computerChoice == 0) {
+    computerChoice = "rock";
+  } else if (computerChoice == 1) {
+    computerChoice = "paper";
+  } else if (computerChoice == 2) {
+    computerChoice = "scissors";
+  }
 
-    showChoice.textContent = `You: ${humanChoice} vs Bot: ${computerChoice}`;
+  showChoice.textContent = `You: ${humanChoice} vs Bot: ${computerChoice}`;
 
-    // logic beating game
-    if (humanChoice === "rock" && computerChoice === "paper"){
-        computerScore++;
-    } else if (humanChoice === "paper" && computerChoice === "scissors"){
-        computerScore++;
-    } else if (humanChoice === "scissors" && computerChoice === "rock"){
-        computerScore++;
-    } else if (humanChoice === computerChoice){
-        computerScore;
-    } else {
-        humanScore++;
-    }
+  // logic beating game
+  if (humanChoice === "rock" && computerChoice === "paper") {
+    computerScore++;
+  } else if (humanChoice === "paper" && computerChoice === "scissors") {
+    computerScore++;
+  } else if (humanChoice === "scissors" && computerChoice === "rock") {
+    computerScore++;
+  } else if (humanChoice === computerChoice) {
+    computerScore;
+  } else {
+    humanScore++;
+  }
 
-    result.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
-    round++;
-    heart--;
+  result.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
+  round++;
+  heart--;
 }
 
-function playGame(){
-    let btn = document.querySelectorAll("input");
-    btn.forEach(button =>{
-        button.addEventListener("click", ()=>{
-            playRound(button.value, getComputerChoice());
-            if (heart === 0){
-                heart = 5;
-            }
-            showHeart.textContent = `${heart}/5`;
+function playGame() {
+  let btn = document.querySelectorAll("input");
+  btn.forEach((button) => {
+    button.addEventListener("click", () => {
+      playRound(button.value, getComputerChoice());
+      if (heart === 0) {
+        heart = 5;
+      }
+      showHeart.textContent = `${heart}/5`;
 
-            if (round === 5){
-                if (humanScore > computerScore){
-                    result.textContent = "Congratulations! You are the winner";
-                } else if (humanScore === computerScore){
-                    result.textContent = "We are tied!";
-                } else{
-                    result.textContent = "Sorry, you lose the game:(";
-                }
-                round = 0;
-                humanScore = 0;
-                computerScore = 0;
-            }
-        })
+      if (round === 5) {
+        round = 0;
+        humanScore = 0;
+        computerScore = 0;
+
+        if (humanScore > computerScore) {
+          result.textContent = "Congratulations! You are the winner";
+        } else if (humanScore === computerScore) {
+          result.textContent = "We are tied!";
+        } else {
+          result.textContent = "Sorry, you lose the game:(";
+        }
+      }
     });
+  });
 }
 
-playGame()
+playGame();
