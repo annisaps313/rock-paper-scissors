@@ -14,7 +14,7 @@ let round = 0;
 
 let heart = 5;
 let showHeart = document.querySelector(".heart");
-showHeart.textContent = "5/5";
+showHeart.textContent = "5/5 ❤️";
 
 function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
@@ -28,7 +28,7 @@ function playRound(humanChoice, computerChoice) {
     computerChoice = "scissors";
   }
 
-  showChoice.textContent = `You: ${humanChoice} vs Bot: ${computerChoice}`;
+  showChoice.textContent = `👤: ${humanChoice} vs 🤖: ${computerChoice}`;
 
   // logic beating game
   if (humanChoice === "rock" && computerChoice === "paper") {
@@ -43,7 +43,7 @@ function playRound(humanChoice, computerChoice) {
     humanScore++;
   }
 
-  result.textContent = `You: ${humanScore} | Bot: ${computerScore}`;
+  result.textContent = `👤: ${humanScore} | 🤖: ${computerScore}`;
   round++;
   heart--;
 }
@@ -56,7 +56,7 @@ function playGame() {
       if (heart === 0) {
         heart = 5;
       }
-      showHeart.textContent = `${heart}/5`;
+      showHeart.textContent = `${heart}/5 ❤️`;
 
       if (round === 5) {
         round = 0;
@@ -64,11 +64,11 @@ function playGame() {
         computerScore = 0;
 
         if (humanScore > computerScore) {
-          result.textContent = "Congratulations! You are the winner";
+          result.textContent = "Congratulations! You are the winner 🎉";
         } else if (humanScore === computerScore) {
-          result.textContent = "We are tied!";
+          result.textContent = "🤝 We are tied!";
         } else {
-          result.textContent = "Sorry, you lose the game:(";
+          result.textContent = "Sorry, you lose the game 🏳️";
         }
       }
     });
